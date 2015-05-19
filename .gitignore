@@ -1,3 +1,5 @@
 .env
 Berksfile.lock
 berks-cookbooks
+*.tfstate
+*.backup
