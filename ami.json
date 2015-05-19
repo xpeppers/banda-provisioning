@@ -1,0 +1,27 @@
+{
+  "variables": {
+    "ami_name": ""
+  },
+
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "eu-west-1",
+      "subnet_id": "subnet-7f157a1a",
+      "security_group_id": "sg-9bd7f7fe",
+      "source_ami": "ami-f0b11187",
+      "ami_virtualization_type": "hvm",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "{{user `ami_name`}}"
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "chef-solo",
+      "cookbook_paths": ["berks-cookbooks"],
+      "run_list": [ "apt", "docker" ]
+    }
+  ]
+}
