@@ -1,2 +1,2 @@
-# Boxpeppers
-XPeppers Docker host box
+# Banda provisioning
+Banda project infrastructure
