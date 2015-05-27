@@ -2,4 +2,5 @@
 Berksfile.lock
 berks-cookbooks
 *.tfstate
+*.tfvars
 *.backup

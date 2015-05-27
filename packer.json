@@ -1,15 +1,19 @@
 {
   "variables": {
-    "ami_name": ""
+    "ami_name": "banda-base",
+    "region": "eu-west-1",
+    "subnet_id": "subnet-0230dc75",
+    "security_group_id": "sg-e7d01c82",
+    "source_ami": "ami-f0b11187"
   },
 
   "builders": [
     {
       "type": "amazon-ebs",
-      "region": "eu-west-1",
-      "subnet_id": "subnet-7f157a1a",
-      "security_group_id": "sg-9bd7f7fe",
-      "source_ami": "ami-f0b11187",
+      "region": "{{user `region`}}",
+      "subnet_id": "{{user `subnet_id`}}",
+      "security_group_id": "{{user `security_group_id`}}",
+      "source_ami": "{{user `source_ami`}}",
       "ami_virtualization_type": "hvm",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",

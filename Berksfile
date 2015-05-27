@@ -1,4 +1,3 @@
 source 'https://api.berkshelf.com'
 
-cookbook 'apt'
-cookbook 'docker'
+cookbook 'dockpeppers', github: 'xpeppers/dockpeppers-cookbook'

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -e
-
-env $(cat .env | xargs) terraform apply -var name=$1 -var key_path=$2
