@@ -25,7 +25,7 @@
     {
       "type": "chef-solo",
       "cookbook_paths": ["berks-cookbooks"],
-      "run_list": [ "apt", "docker" ]
+      "run_list": ["dockpeppers"]
     }
   ]
 }
